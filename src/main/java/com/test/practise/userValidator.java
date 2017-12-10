@@ -1,4 +1,4 @@
-package in28min;
+package com.test.practise;
 
 public class userValidator {
     public boolean validateUser(String user, String password) {
