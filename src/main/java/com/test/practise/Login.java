@@ -17,7 +17,7 @@ public class Login extends HttpServlet {
        req.setAttribute("name", req.getParameter("name"));
        req.setAttribute("password", req.getParameter("password"));
       req.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(req, response);
-     
+        System.out.println();
     }
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
