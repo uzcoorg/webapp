@@ -10,6 +10,7 @@ import java.io.PrintWriter;
 
 @WebServlet(urlPatterns = "/login.do")
 public class Login extends HttpServlet {
+    private userValidationService validate = new userValidationService();
     @Override
     protected void doGet(HttpServletRequest req , HttpServletResponse response) throws ServletException, IOException{
         //PrintWriter writer = response.getWriter();
@@ -17,8 +18,22 @@ public class Login extends HttpServlet {
        req.setAttribute("name", req.getParameter("name"));
        req.setAttribute("password", req.getParameter("password"));
       req.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(req, response);
-        System.out.println();
-        System.out.println();
-    }
 
+    }
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws IOException, ServletException {
+        String user = request.getParameter("name");
+        String password = request.getParameter("password");
+
+
+        boolean isvalid = validate.validUser(user, password);
+        if (isvalid){
+            request.getRequestDispatcher("/WEB-INF/views/welcome.jsp").forward(request, response);
+        }
+        else {
+            request.setAttribute("errorMessage", "INVALID PASSWORD OR USER DONT EXIT ");
+            request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response);
+        }
+    }
 }
