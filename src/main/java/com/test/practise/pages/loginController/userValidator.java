@@ -1,4 +1,4 @@
-package com.test.practise;
+package com.test.practise.pages.loginController;
 
 public class userValidator {
     public boolean validateUser(String user, String password) {
