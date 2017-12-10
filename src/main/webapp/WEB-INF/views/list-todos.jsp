@@ -3,7 +3,9 @@
 <title>Yahoo!!</title>
 </head>
 <body>
-Welcome Todo list returned
+
+Hi ${name1}<BR/>
+Welcome Todo list returned <BR/>
 ${todos}
 
 </body>
