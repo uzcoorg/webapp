@@ -7,7 +7,12 @@
 <%
 Date date = new Date();
 %>
-Welcome To Jsp ${name} password is ${password}
+
 <strong>Current Time is</strong>: <%=new Date() %>
+<p><font color="red">${errorMessage}</font></p>
+	<form action="/login.do" method="POST">
+		Name : <input name="name" type="text" /> Password : <input name="password" type="password" /> <input type="submit" />
+	</form>
+
 </body>
 </html>
