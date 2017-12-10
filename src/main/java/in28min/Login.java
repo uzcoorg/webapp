@@ -17,7 +17,7 @@ public class Login extends HttpServlet {
        req.setAttribute("name", req.getParameter("name"));
        req.setAttribute("password", req.getParameter("password"));
       req.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(req, response);
-        System.out.println(9);
+        System.out.println();
         System.out.println(4);
     }
 
