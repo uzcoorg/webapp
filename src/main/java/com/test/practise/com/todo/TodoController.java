@@ -21,7 +21,7 @@ public class TodoController {
 
     public String ShowloginPAge(ModelMap model) {
 
-        model.addAttribute("todos", service.retrieveTodos("Allen"));
+        model.addAttribute("todos", service.retrieveTodos("in28Minutes"));
         return "list-todos";
     }
     //
@@ -35,7 +35,7 @@ public class TodoController {
 
     @RequestMapping(value = "/add-todo", method = RequestMethod.POST)
     public String addTodo(ModelMap model, @RequestParam String desc) {
-        service.addTodo("Allen", desc, new Date(), false);
+        service.addTodo("in28Minutes", desc, new Date(), false);
         model.clear();// to prevent request parameter "name" to be passed
         return "redirect:/list-todos";
     }
