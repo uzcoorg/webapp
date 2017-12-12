@@ -1,15 +1,19 @@
 package com.test.practise.com.todo;
 
+import javax.validation.constraints.Size;
 import java.util.Date;
 import java.util.Objects;
 
 public class Todo {
     private int id;
     private String user;
+
+    @Size(min = 10, message = "Enter atleast 10 Characters.")
     private String desc;
+
 private Date tDate;
 private boolean isDone;
-
+ Todo(){}
 
     public Todo(int id, String user, String desc, Date tDate, boolean isDone) {
         this.id = id;

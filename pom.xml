@@ -16,6 +16,12 @@
             <version>6.0</version>
             <scope>provided</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.eclipse.persistence</groupId>
+            <artifactId>eclipselink</artifactId>
+            <version>2.7.0</version>
+        </dependency>
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
@@ -25,6 +31,11 @@
             <groupId>org.webjars</groupId>
             <artifactId>bootstrap</artifactId>
             <version>3.3.6</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>5.0.2.Final</version>
         </dependency>
         <dependency>
             <groupId>org.webjars</groupId>
@@ -54,8 +65,8 @@
                     <version>3.2</version>
                     <configuration>
                         <verbose>true</verbose>
-                        <source>1.8</source>
-                        <target>1.8</target>
+                        <source>1.9</source>
+                        <target>1.9</target>
                         <showWarnings>true</showWarnings>
                     </configuration>
                 </plugin>
